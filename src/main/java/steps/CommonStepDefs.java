@@ -11,17 +11,18 @@ import ru.sbtqa.tag.pagefactory.find.FindUtils;
 import ru.sbtqa.tag.pagefactory.junit.CoreSteps;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class CommonStepDefs {
 
   private final CoreSteps coreSteps = new CoreSteps();
 
-  @И("^(?:открывается раздел | появляется меню) \"([^\"]*)\"$")
+  @И("^(?:открывается раздел|появляется меню) \"([^\"]*)\"$")
   public void openPage(String title) throws PageInitializationException {
     coreSteps.openPage(title);
   }
 
-  @И("^(?:пользователь |он | )?(?:проверяет что отображается кнопка|отображается кнопка|отображается элемент|отображается|отображается поле|отображается меню|отображается ссылка) \"([^\"]*)\" (?:c текстом|) \"([^\"]*)\"$")
+  @И("^(?:пользователь |он |)(?:проверяет что отображается кнопка|проверяет что отображается|отображается кнопка|отображается элемент|отображается|отображается поле|отображается меню|отображается ссылка) \"([^\"]*)\"(?: c текстом|) \"([^\"]*)\"$")
   public void checkDisplayElement(String arg, String text) throws PageException {
     WebElement el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
     Assert.assertTrue("Элемент " + arg + " не найден на странице", el.isDisplayed());
@@ -34,10 +35,19 @@ public class CommonStepDefs {
     Assert.assertEquals("Ожидание: " + link + ", реальность: " + el.getAttribute("href"), link, el.getAttribute("href"));
   }
 
-  @И("^отображается \"([^\"]*)\"$")
+  @И("^(?:отображается|отображается поле|отображается кнопка|отображается ссылка) \"([^\"]*)\"$")
   public void checkDisplayElement(String arg) throws PageException {
     WebElement el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
     Assert.assertTrue("Элемент " + arg + " не найден на странице", el.isDisplayed());
+  }
+
+  @И("^отображаются \"([^\"]*)\"$")
+  public void checkDisplayElements(String arg) throws PageException {
+    List<WebElement> el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
+    Assert.assertTrue(el.size() > 1);
+    for(WebElement element : el) {
+      element.isDisplayed();
+    }
   }
 
   @И("^отображаются \"([^\"]*)\" \"([^\"]*)\"$")
@@ -45,5 +55,23 @@ public class CommonStepDefs {
     List<WebElement> el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
     Assert.assertEquals("Ожидание: " + Integer.parseInt(count) + ", реальность: " + el.size(), Integer.parseInt(count), el.size());
   }
+
+  @И("^нажимает на(?: кнопку | ссылку | элемент | поле | )\"([^\"]*)\"$")
+  public void click(String arg) throws PageException {
+    WebElement el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
+    el.click();
+  }
+
+  @И("^(?:пользователь |он |)отображается многострочный \"([^\"]*)\"(?: c текстом|) \"([^\"]*)\"$")
+    public void checkDisplayArrayElement(String arg, String text) throws PageException {
+    String elementText = "";
+    List<WebElement> el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
+    for (WebElement element : el){
+    Assert.assertTrue("Элемент " + arg + " не найден на странице", element.isDisplayed());
+    elementText = elementText + element.getText();
+    }
+    elementText.replaceAll("\n", " ");
+    Assert.assertEquals("Ожидание: " + text + ", реальность: " + elementText, text, elementText);
+    }
 
 }

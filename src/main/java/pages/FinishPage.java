@@ -5,7 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import ru.sbtqa.tag.pagefactory.annotations.ElementTitle;
 import ru.sbtqa.tag.pagefactory.annotations.PageEntry;
 
-@PageEntry(title = "Информационная")
+import java.util.List;
+
+@PageEntry(title = "Информационный")
 public class FinishPage extends BasePage {
 
   @ElementTitle("Крестик выхода")
@@ -28,7 +30,7 @@ public class FinishPage extends BasePage {
   @FindBy(xpath = ".//div[@class = 'thankyou__direct-link-wrap']/button")
   WebElement copyButton;
 
-  @ElementTitle("Секция Установка и управление в домене")
+  @ElementTitle("Подзаголовок Установка и управление в домене")
   @FindBy(xpath = "(.//*[@class = 'edit-area__section-header'])[1]")
   WebElement installSection;
 
@@ -56,7 +58,7 @@ public class FinishPage extends BasePage {
   @FindBy(xpath = "(.//div[@class = 'thankyou__install-group']/*[@class = 'edit-area__section-text']/a)[4]")
   WebElement installSectionManageAdmlLink;
 
-  @ElementTitle("Секция Обратная связь")
+  @ElementTitle("Подзаголовок Обратная связь")
   @FindBy(xpath = "(.//*[@class = 'edit-area__section-header'])[2]")
   WebElement feedbackSection;
 
@@ -79,5 +81,42 @@ public class FinishPage extends BasePage {
   @ElementTitle("Отправить")
   @FindBy(id = "thankyou-send-btn")
   WebElement feedbackSectionSendButton;
+//-----------------------
+
+  @ElementTitle("Крестик закрытия попапа")
+  @FindBy(className = "preview-area__popup-close")
+  WebElement popupSectionExit;
+
+  @ElementTitle("Ок")
+  @FindBy(xpath = ".//button/span[@class = 'y-button__text']")
+  WebElement popupSectionOkButton;
+
+  @ElementTitle("Попап скачивания браузера")
+  @FindBy(xpath = ".//div[contains(@class, 'y-popup__overlay_visible')]")
+  WebElement popupSection;
+
+  @ElementTitle("Заголовок попапа")
+  @FindBy(xpath = ".//*[@class = 'preview-area__popup-close']/../div[2]/div")
+  WebElement popupSectionHeadline;
+
+  @ElementTitle("Текст попапа")
+  @FindBy(xpath = ".//*[@class = 'preview-area__popup-close']/../div[2]/div/..//p")
+  List<WebElement> popupSectionText;
+
+  @ElementTitle("Ссылка на инструкцию в попапе")
+  @FindBy(xpath = "(.//*[@class = 'preview-area__popup-close']/../div[2]/div/..//p/a)[1]")
+  WebElement popupSectionInstallLink;
+
+  @ElementTitle("Ссылка на Групповые политики в попапе")
+  @FindBy(xpath = "(.//*[@class = 'preview-area__popup-close']/../div[2]/div/..//p/a)[2]")
+  WebElement popupSectionManageGroupLink;
+
+  @ElementTitle("Ссылка на admx в попапе")
+  @FindBy(xpath = "(.//*[@class = 'preview-area__popup-close']/../div[2]/div/..//p/a)[3]")
+  WebElement popupSectionManageAdmxLink;
+
+  @ElementTitle("Ссылка на adml в попапе")
+  @FindBy(xpath = "(.//*[@class = 'preview-area__popup-close']/../div[2]/div/..//p/a)[4]")
+  WebElement popupSectionManageAdmlLink;
 
 }

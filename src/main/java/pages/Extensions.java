@@ -40,6 +40,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = ".//div[contains(text(), 'Загрузки')]/..//div[@class = 'edit-area__ext-title']")
   WebElement saveFromNet;
 
+  @ElementTitle("Иконка дополнения SaveFrom.net")
+  @FindBy(xpath = ".//div[contains(text(), 'Загрузки')]/..//img")
+  WebElement saveFromNetIcon;
+
   @ElementTitle("Текст дополнения SaveFrom.net")
   @FindBy(xpath = ".//div[contains(text(), 'Загрузки')]/..//span[@class = 'edit-area__ext-subtitle']")
   WebElement saveFromNetText;
@@ -57,6 +61,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//div[@class = 'edit-area__ext-title'])[1]")
   WebElement turnOffTheLights;
 
+  @ElementTitle("Иконка дополнения Turn Off The Lights")
+  @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//img)[1]")
+  WebElement turnOffTheLightsIcon;
+
   @ElementTitle("Текст дополнения Turn Off The Lights")
   @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//span[@class = 'edit-area__ext-subtitle'])[1]")
   WebElement turnOffTheLightsText;
@@ -69,6 +77,10 @@ public class Extensions extends BasePage {
   @ElementTitle("Дополнение Турбо")
   @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//div[@class = 'edit-area__ext-title'])[2]")
   WebElement turbo;
+
+  @ElementTitle("Иконка дополнения Турбо")
+  @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//img)[2]")
+  WebElement turboIcon;
 
   @ElementTitle("Текст дополнения Турбо")
   @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//span[@class = 'edit-area__ext-subtitle'])[2]")
@@ -91,6 +103,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//div[@class = 'edit-area__ext-title'])[3]")
   WebElement lightshot;
 
+  @ElementTitle("Иконка дополнения Lightshot")
+  @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//img)[3]")
+  WebElement lightshotIcon;
+
   @ElementTitle("Текст дополнения Lightshot")
   @FindBy(xpath = "(.//div[contains(text(), 'Удобные инструменты')]/..//span[@class = 'edit-area__ext-subtitle'])[3]")
   WebElement lightshotText;
@@ -108,6 +124,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//div[@class = 'edit-area__ext-title'])[1]")
   WebElement antishock;
 
+  @ElementTitle("Иконка дополнения Антишок")
+  @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//img)[1]")
+  WebElement antishockIcon;
+
   @ElementTitle("Текст дополнения Антишок")
   @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//span[@class = 'edit-area__ext-subtitle'])[1]")
   WebElement antishockText;
@@ -121,6 +141,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//div[@class = 'edit-area__ext-title'])[2]")
   WebElement flashBlock;
 
+  @ElementTitle("Иконка дополнения Блокировка флеш-данных")
+  @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//img)[2]")
+  WebElement flashBlockIcon;
+
   @ElementTitle("Текст дополнения Блокировка флеш-данных")
   @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//span[@class = 'edit-area__ext-subtitle'])[2]")
   WebElement flashBlockText;
@@ -133,6 +157,10 @@ public class Extensions extends BasePage {
   @ElementTitle("Дополнение Adguard")
   @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//div[@class = 'edit-area__ext-title'])[3]")
   WebElement adguard;
+
+  @ElementTitle("Иконка дополнения Adguard")
+  @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//img)[3]")
+  WebElement adguardIcon;
 
   @ElementTitle("Текст дополнения Adguard")
   @FindBy(xpath = "(.//div[contains(text(), 'Безопасность в сети')]/..//span[@class = 'edit-area__ext-subtitle'])[3]")
@@ -151,6 +179,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//div[@class = 'edit-area__ext-title'])[1]")
   WebElement advisor;
 
+  @ElementTitle("Иконка дополнения Советник")
+  @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//img)[1]")
+  WebElement advisorIcon;
+
   @ElementTitle("Текст дополнения Советник")
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//span[@class = 'edit-area__ext-subtitle'])[1]")
   WebElement advisorText;
@@ -163,6 +195,10 @@ public class Extensions extends BasePage {
   @ElementTitle("Дополнение Letyshops")
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//div[@class = 'edit-area__ext-title'])[2]")
   WebElement letyshops;
+
+  @ElementTitle("Иконка дополнения Letyshops")
+  @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//img)[2]")
+  WebElement letyshopsIcon;
 
   @ElementTitle("Текст дополнения Letyshops")
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//span[@class = 'edit-area__ext-subtitle'])[2]")
@@ -177,6 +213,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//div[@class = 'edit-area__ext-title'])[3]")
   WebElement aliTools;
 
+  @ElementTitle("Иконка дополнения AliTools")
+  @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//img)[3]")
+  WebElement aliToolsIcon;
+
   @ElementTitle("Текст дополнения AliTools")
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//span[@class = 'edit-area__ext-subtitle'])[3]")
   WebElement aliToolsText;
@@ -189,6 +229,10 @@ public class Extensions extends BasePage {
   @ElementTitle("Дополнение ГдеПосылка")
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//div[@class = 'edit-area__ext-title'])[4]")
   WebElement  whereParcel;
+
+  @ElementTitle("Иконка дополнения ГдеПосылка")
+  @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//img)[4]")
+  WebElement  whereParcelIcon;
 
   @ElementTitle("Текст дополнения ГдеПосылка")
   @FindBy(xpath = "(.//div[contains(text(), 'Покупки')]/..//span[@class = 'edit-area__ext-subtitle'])[4]")
@@ -207,6 +251,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//div[@class = 'edit-area__ext-title'])[1]")
   WebElement evernote;
 
+  @ElementTitle("Иконка дополнения Evernote")
+  @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//img)[1]")
+  WebElement evernoteIcon;
+
   @ElementTitle("Текст дополнения Evernote")
   @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//span[@class = 'edit-area__ext-subtitle'])[1]")
   WebElement evernoteText;
@@ -220,6 +268,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//div[@class = 'edit-area__ext-title'])[2]")
   WebElement lastPass;
 
+  @ElementTitle("Иконка дополнения LastPass")
+  @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//img)[2]")
+  WebElement lastPassIcon;
+
   @ElementTitle("Текст дополнения LastPass")
   @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//span[@class = 'edit-area__ext-subtitle'])[2]")
   WebElement lastPassText;
@@ -232,6 +284,10 @@ public class Extensions extends BasePage {
   @ElementTitle("Дополнение Pocket")
   @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//div[@class = 'edit-area__ext-title'])[3]")
   WebElement pocket;
+
+  @ElementTitle("Иконка дополнения Pocket")
+  @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//img)[3]")
+  WebElement pocketIcon;
 
   @ElementTitle("Текст дополнения Pocket")
   @FindBy(xpath = "(.//div[contains(text(), 'Управление')]/..//span[@class = 'edit-area__ext-subtitle'])[3]")
@@ -250,6 +306,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Сервисы Яндекса')]/..//div[@class = 'edit-area__ext-title'])[1]")
   WebElement musicAndRadio;
 
+  @ElementTitle("Иконка дополнени Музыка и Радио")
+  @FindBy(xpath = "(.//div[contains(text(), 'Сервисы Яндекса')]/..//img)[1]")
+  WebElement musicAndRadioIcon;
+
   @ElementTitle("Текст дополнения Музыка и Радио")
   @FindBy(xpath = "(.//div[contains(text(), 'Сервисы Яндекса')]/..//span[@class = 'edit-area__ext-subtitle'])[1]")
   WebElement musicAndRadioText;
@@ -262,6 +322,10 @@ public class Extensions extends BasePage {
   @ElementTitle("Дополнение Карточка")
   @FindBy(xpath = "(.//div[contains(text(), 'Сервисы Яндекса')]/..//div[@class = 'edit-area__ext-title'])[2]")
   WebElement card;
+
+  @ElementTitle("Иконка дополнени  Карточка")
+  @FindBy(xpath = "(.//div[contains(text(), 'Сервисы Яндекса')]/..//img)[2]")
+  WebElement cardIcon;
 
   @ElementTitle("Текст дополнения Карточка")
   @FindBy(xpath = "(.//div[contains(text(), 'Сервисы Яндекса')]/..//span[@class = 'edit-area__ext-subtitle'])[2]")
@@ -280,6 +344,10 @@ public class Extensions extends BasePage {
   @FindBy(xpath = "(.//div[contains(text(), 'Каталог Opera')]/..//div[@class = 'edit-area__ext-title'])[1]")
   WebElement criptoPro;
 
+  @ElementTitle("Иконка дополнения КриптоПро ЭЦП")
+  @FindBy(xpath = "(.//div[contains(text(), 'Каталог Opera')]/..//img)[1]")
+  WebElement criptoProIcon;
+
   @ElementTitle("Текст дополнения КриптоПро ЭЦП")
   @FindBy(xpath = "(.//div[contains(text(), 'Каталог Opera')]/..//span[@class = 'edit-area__ext-subtitle'])[1]")
   WebElement criptoProText;
@@ -289,7 +357,7 @@ public class Extensions extends BasePage {
   WebElement criptoProSwitch;
 //-------
 
-  @ElementTitle("Кнопка Сохранить изменения")
+  @ElementTitle("Сохранить изменения")
   @FindBy(id = "extensions-save-btn")
   WebElement saveChangesButton;
 
