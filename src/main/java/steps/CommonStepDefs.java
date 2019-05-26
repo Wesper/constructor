@@ -22,7 +22,7 @@ public class CommonStepDefs {
     coreSteps.openPage(title);
   }
 
-  @И("^(?:пользователь |он |)(?:проверяет что отображается кнопка|проверяет что отображается|отображается кнопка|отображается элемент|отображается|отображается поле|отображается меню|отображается ссылка) \"([^\"]*)\"(?: c текстом|) \"([^\"]*)\"$")
+  @И("^(?:пользователь |он |)(?:проверяет что отображается кнопка|проверяет что отображается|отображается кнопка|отображается элемент|отображается|отображается поле|отображается меню|отображается ссылка) \"([^\"]*)\"(?: с текстом|) \"([^\"]*)\"$")
   public void checkDisplayElement(String arg, String text) throws PageException {
     WebElement el = ((FindUtils) Environment.getFindUtils()).getElementByTitle(PageContext.getCurrentPage(), arg);
     Assert.assertTrue("Элемент " + arg + " не найден на странице", el.isDisplayed());

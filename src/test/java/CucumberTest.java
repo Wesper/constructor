@@ -7,9 +7,11 @@ import ru.sbtqa.tag.pagefactory.Tag;
 @CucumberOptions(monochrome = true,
         plugin = {"pretty"},
         glue = {"ru.sbtqa.tag.stepdefs", "steps"},
-        features = {"src/test/resources/features/"}
-//        tags = {"@all"}
+        features = {"src/test/resources/features/"},
+        tags = {"@1"}
 )
+
+//System.setProperty("webdriver.chrome.binary", "путь к chrome.exe");
 
 public class CucumberTest extends Tag {
 }
